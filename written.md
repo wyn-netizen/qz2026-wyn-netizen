@@ -206,9 +206,11 @@ logs = [
 3. 解释为什么第 2 问不能直接用 `len(logs)` 得到结果，需要什么遍历结构？
 
 答案；
+```python
 1.error_logs = [item for item in logs if item["level"] == "ERROR"]
   print（error_logs)
-2.count = {}
+```
+```python2.count = {}
   for log in logs:
       name = log["user"]
       if name in count:
@@ -216,6 +218,7 @@ logs = [
       else:
           count[name] = 1
   print(count)
+```
 3.len (logs) 是整个 logs 列表的长度，只能知道有多少用户，但不能区分不同用户。
   需要用 for 循环遍历 logs 里面的每一条日志记录，提取 user 并累加次数。  
   
