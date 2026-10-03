@@ -210,7 +210,8 @@ logs = [
 1.error_logs = [item for item in logs if item["level"] == "ERROR"]
   print（error_logs)
 ```
-```python2.count = {}
+```python
+2.count = {}
   for log in logs:
       name = log["user"]
       if name in count:
