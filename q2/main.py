@@ -27,5 +27,11 @@ class UserManager:
                 del self,users[index]
                 return True
         return False
+    def list_users(self) ->list:
+        return self.users.copy()
+    def save_to_json(self,file_path:str):
+        with open(file_path,"w",encoding="utf-8") as f:
+            json.dump(self.users,f,ensure_ascii=False)
+            
         
         
