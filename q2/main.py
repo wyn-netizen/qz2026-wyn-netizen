@@ -21,4 +21,11 @@ class UserManager:
             user["age"] = new_age
             return True
         return False
+    def remove_user(self,user_id:int) ->bool:
+        for index,user in enumerate(self.user):
+            if user["id"] == user_id:
+                del self,users[index]
+                return True
+        return False
+        
         
