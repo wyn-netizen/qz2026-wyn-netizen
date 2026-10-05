@@ -14,4 +14,11 @@ class UserManager:
         for user in self.user:
             if user["id"] == user_id:
                 return user_id
-        return None        
+        return None
+    def change_age(self,user_id:int,new_age:int) ->bool:
+        user = self.get_user(user_id)
+        if user is not None:
+            user["age"] = new_age
+            return True
+        return False
+        
