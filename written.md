@@ -247,4 +247,5 @@ def safe_divide(a, b):
     except (ValueError, ZeroDivisionError):                             
         return None
 ```                                                     
-原因: 字符串种类多，转数字难以用 if 一次性判断，代码繁琐                     
+原因: 字符串种类多，转数字难以用 if 一次性判断，代码繁琐
+      用except异常捕获的话，出现异常时不会报错，如果用if逐条判断的话，代码量太大而且路程长
